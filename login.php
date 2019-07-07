@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($username)){
         $user_id = sha1($username);
     }else(empty($username)){
-        http_response_code(404);
+        echo("ユーザーネームが空です。");
     }else{
         http_response_code(403);
     }
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if(isset($password)){
         $password_id = sha1($password);
     }else(empty($password)){
-        http_response_code(404);
+        echo("パスワードが空です。");
     }else{
         http_response_code(403);
     }
